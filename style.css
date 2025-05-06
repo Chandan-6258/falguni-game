@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#gameCanvas {
+  background-color: #000;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  display: block;
+  margin: 0 auto;
+  touch-action: none;
+}
+
+.controls {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.d-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.horizontal {
+  display: flex;
+  gap: 50px;
+}
+
+.dir-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.dir-btn:active {
+  background-color: #4CAF50;
+  transform: scale(0.95);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-buttons button:active {
+  background-color: #45a049;
+  transform: scale(0.95);
+}
+
+@media (max-width: 400px) {
+  .dir-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+  }
+  
+  .horizontal {
+      gap: 30px;
+  } 
+  
+  .action-buttons {
+      gap: 10px;
+  }
+  
+  .action-buttons button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+  }
+} 
